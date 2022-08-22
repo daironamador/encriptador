@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador Alura Challenge - by Dairon Amador</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="logo">
+        <img src="assets/img/logo.png" alt="">
+    </div>
+
+    <textarea name="textEncrypt" id="input-text" cols="30" rows="10" placeholder="Escribe algo"></textarea>
+    <p id="warning">Solo letras minusculas y sin acentos</p>
+    <div id="buttons">
+        <button id="btn-encrypt" class="btn-hover">Encriptar</button>
+        <button id="btn-decrypt" class="btn-hover">Desencriptar</button>
+    </div>
+
+    <div class="results">
+        <div id="infoToCopy">
+            <p id="text-encrypted"></p>
+        <button id="btn-copy" >Copiar</button>
+        </div>
+        <div id="infoToHide">
+            <div id="muneco">
+                <img src="assets/img/muneco.png" alt="">
+            </div>
+            <div id="messagebox">
+                <h2>ningun mensaje fue encontrado</h2>
+                <p>ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+        </div>
+        
+    </div>
+    
+<footer><div id="made"> <span>Made by - Dairon Amador</span></div></footer>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
