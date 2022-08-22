@@ -40,11 +40,7 @@ btnDecrypt.addEventListener('click', ()=>{
 });
 
 btnCopy.addEventListener('click', ()=>{
-
- /* Copy the text inside the text field */
-navigator.clipboard.writeText(textEncrypted.textContent);
-
-/* Alert the copied text */
-alert("Texto copiado: " + textEncrypted.textContent);
+    navigator.clipboard.writeText(textEncrypted.textContent);
+    alert("Texto copiado: " + textEncrypted.textContent);
 });
 
