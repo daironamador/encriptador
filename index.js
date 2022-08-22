@@ -1,18 +1,14 @@
 'use strict'
 
-document.getElementById("infoToCopy").style.display = "none";
-
 var btnEncrypt = document.getElementById('btn-encrypt');
 var btnDecrypt = document.getElementById('btn-decrypt');
 var btnCopy = document.getElementById('btn-copy');
 var inputText = document.getElementById('input-text');
 var textEncrypted = document.getElementById('text-encrypted');
 
-btnEncrypt.addEventListener('click', ()=>{
-    textEncrypted.innerHTML= '';
+document.getElementById("infoToCopy").style.display = "none";
 
-    document.getElementById("infoToCopy").style.display = "";
-    document.getElementById("infoToHide").style.display = "none";
+btnEncrypt.addEventListener('click', ()=>{
 
     let encrypt = inputText.value
     .replaceAll("e","enter")
@@ -21,11 +17,20 @@ btnEncrypt.addEventListener('click', ()=>{
     .replaceAll("o","ober")
     .replaceAll("u","ufat");
 
+    if (checkText(encrypt) == '2' || checkText(encrypt) == '1') {
+        alert('Solo letras minuscilas y sin acentos');
+   } else {
+
+    document.getElementById("infoToCopy").style.display = "";
+    document.getElementById("infoToHide").style.display = "none";
+
     textEncrypted.innerHTML= encrypt;   
+
+   }
+
 });
 
 btnDecrypt.addEventListener('click', ()=>{
-    textEncrypted.innerHTML= '';
 
     let decrypt = inputText.value
     .replaceAll("enter","e")
@@ -34,9 +39,17 @@ btnDecrypt.addEventListener('click', ()=>{
     .replaceAll("ober","o")
     .replaceAll("ufat","u");
 
-    textEncrypted.innerHTML= decrypt;
 
+    if (checkText(decrypt) == '2' || checkText(decrypt) == '1' ) {
+        alert('Solo letras minuscilas y sin acentos');
+   } else {
+
+    document.getElementById("infoToCopy").style.display = "";
+    document.getElementById("infoToHide").style.display = "none";
     
+    textEncrypted.innerHTML= decrypt;
+   }
+
 });
 
 btnCopy.addEventListener('click', ()=>{
@@ -44,3 +57,16 @@ btnCopy.addEventListener('click', ()=>{
     alert("Texto copiado: " + textEncrypted.textContent);
 });
 
+function checkText(words) {
+    words = String(words).trim();
+    const regxs = {
+      "lower": /^[a-z0-9 ]+$/,
+      "upper": /^[A-Z0-9 ]+$/,
+      "upperLower": /^[A-Za-z0-9 ]+$/
+    }
+   
+    if (regxs.lower.test(words)) return '0';
+    if (regxs.upper.test(words)) return '1';
+    if (regxs.upperLower.test(words)) return '2';
+    return -1;
+  }
