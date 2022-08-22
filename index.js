@@ -28,6 +28,11 @@ btnEncrypt.addEventListener('click', ()=>{
 
    }
 
+   if(inputText.value.length == 0 ){
+    document.getElementById("infoToCopy").style.display = "none";
+    document.getElementById("infoToHide").style.display = "";
+   }
+
 });
 
 btnDecrypt.addEventListener('click', ()=>{
@@ -49,6 +54,12 @@ btnDecrypt.addEventListener('click', ()=>{
     
     textEncrypted.innerHTML= decrypt;
    }
+
+   if(inputText.value.length == 0 ){
+    document.getElementById("infoToCopy").style.display = "none";
+    document.getElementById("infoToHide").style.display = "";
+   }
+   
 
 });
 
