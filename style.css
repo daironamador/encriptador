@@ -1,10 +1,10 @@
 body {
-font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: #F3F5FC;
 }
 
 #logo{
-    display: flex;
+display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 0px;
@@ -45,8 +45,6 @@ height: 48px;
 .results {
     display: flex;
     position: absolute;
-    width: 280px;
-    height: 580px;
     left: 1010px;
     top: 30px;
     background: #FFFFFF;
@@ -68,9 +66,6 @@ height: 48px;
 }
 
 #messagebox {
-    position: absolute;
-    width: 200px;
-    left: 15%;
     top: 320px;
     font-size: 12px !important;
     text-align: center;
@@ -172,7 +167,6 @@ top: 550px;
 #text-encrypted {
     margin-top: 25px;
     width: 249px;
-    height: 452px;
     font-size: 19px;
 }
 
@@ -182,3 +176,109 @@ footer {
     left: 45%;
     font-size: 14px;
 }
+
+
+@media (max-width:395px){
+    #logo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        position: absolute;
+        left: -20px;
+        top: 20px;
+    }
+
+    #input-text {
+        position: absolute;
+        top: 150px;
+        left: 10px;
+        width: 366px;
+        height: 250px;
+        padding: 0px;
+        background: #F3F5FC;
+        border: none;
+        font-family: helvetica;
+        font-size: 25px;
+        color: #0a3871;
+    }
+
+
+    #warning {
+        position: absolute;
+        top: 410px;
+        left: 60px;
+    }
+
+    #buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 24px;
+        position: absolute;
+        width: 390px;
+        left: 0px;
+        height: 67px;
+        top: 500px;
+        justify-content: center;
+    }
+
+    .results {
+        display: flex;
+        position: absolute;
+        width: 360px;
+        gap: 90px;
+        min-height: 200px;
+        left: 18px;
+        top: 650px;
+        background: #FFFFFF;
+        box-shadow: 0px 24px 32px -8px rgb(0 0 0 / 8%);
+        border-radius: 32px;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+    }
+
+    div#muneco {
+        display: none;
+    }
+
+    #messagebox {
+        width: 200px;
+        top: 320px;
+        font-size: 12px !important;
+        text-align: center;
+    }
+
+    footer {
+        position: absolute;
+        top: 892px;
+        left: 28%;
+        font-size: 14px;
+    }
+
+    #text-encrypted {
+        margin-top: 25px;
+        width: 300px;
+        font-size: 19px;
+        padding-bottom: 70px;
+    }
+
+    #btn-copy {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 300px;
+        height: 57px;
+        background: rgb(0 0 0 / 0%);
+        color: #0A3871;
+        border-radius: 24px;
+        justify-content: center;
+        font-size: 18px;
+        border: 2px solid #0a3871;
+        align-content: center;
+    }
+  }
