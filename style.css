@@ -342,11 +342,6 @@ body {
         font-size: 19px;
     }
 
-    div#infoToCopy {
-        display: block;
-        position: fixed;
-        left: 80px;
-    }
 
     
 
@@ -382,8 +377,8 @@ body {
     #input-text {
         position: absolute;
         top: 150px;
-        left: 10px;
-        width: 366px;
+        left: 20px;
+        width: 376px;
         height: 250px;
         padding: 0px;
         background: #F3F5FC;
