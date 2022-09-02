@@ -367,8 +367,8 @@ body {
     }
 }
 
-/* Reolucion de patalla de 395 Pixeles (Dispositivsos móviles) */
-@media (max-width:395px) {
+/* Reolucion de patalla de 414 Pixeles (Dispositivsos móviles) */
+@media (max-width:414px) {
     #logo {
         display: flex;
         flex-direction: column;
