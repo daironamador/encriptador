@@ -3,8 +3,10 @@ body {
     background: #F3F5FC;
 }
 
-/* Reolucion de patalla de 1336 Pixeles */
-@media (max-width:1366px) {
+/* Reolucion de patalla de 1336 Pixeles 
+@media (max-width:1366px) {}
+*/
+
     #logo {
         display: flex;
         flex-direction: column;
@@ -182,7 +184,7 @@ body {
         left: 45%;
         font-size: 14px;
     }
-}
+
 
 /* Reolucion de patalla de 1280 Pixeles (Tamaño común) */
 @media (max-width:1280px) {
